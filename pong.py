@@ -205,10 +205,10 @@ class pong:
             pygame.mixer.Sound.play(self.bounce)
 
     def win_condition(self):
-        if (self.player_score >= 2 and (self.player_score - self.computer_score) >= 2):
+        if (self.player_score >= 11 and (self.player_score - self.computer_score) >= 2):
             self.p_games_won += 1
             self.player_score, self.computer_score = 0, 0
-        if (self.computer_score >= 2 and (self.computer_score - self.player_score) >= 2):
+        if (self.computer_score >= 11 and (self.computer_score - self.player_score) >= 2):
             self.c_games_won += 1
             self.player_score, self.computer_score = 0, 0
         if (self.p_games_won == 3):
